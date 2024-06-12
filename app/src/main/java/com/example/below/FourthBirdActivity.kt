@@ -18,8 +18,6 @@ class FourthBirdActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityFourthBirdBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        val btnPrev3 = findViewById<ImageView>(R.id.btnPrev3)
-        val btnNext3 = findViewById<ImageView>(R.id.btnNext3)
 
         binding.btnPrev3.setOnClickListener{
             finish()
