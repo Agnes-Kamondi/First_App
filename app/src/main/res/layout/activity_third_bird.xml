@@ -9,8 +9,8 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="396dp"
-        android:layout_height="567dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_marginBottom="108dp"
         android:scaleType="fitXY"
         app:layout_constraintBottom_toTopOf="@+id/textView4"
@@ -20,19 +20,6 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.6"
         app:srcCompat="@drawable/birdc" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="409dp"
-        android:text="Parrot"
-        android:background="#3F51B5"
-        android:textColor="@color/white"
-        android:textSize="22sp"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
-        tools:layout_editor_absoluteX="186dp"
-        tools:ignore="MissingConstraints" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideline3"
@@ -45,8 +32,9 @@
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Parrot"
-        android:textSize="22sp"
+        android:text="@string/blue_yellow_and_green_long_beaked_bird"
+        android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

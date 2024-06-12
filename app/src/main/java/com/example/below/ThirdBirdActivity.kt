@@ -7,24 +7,30 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.example.below.databinding.ActivityThirdBirdBinding
+import com.squareup.picasso.Picasso
 
 class ThirdBirdActivity : AppCompatActivity() {
+    lateinit var binding: ActivityThirdBirdBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
-        setContentView(R.layout.activity_third_bird)
+        binding = ActivityThirdBirdBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        val btnPrev2 = findViewById<ImageView>(R.id.btnPrev2)
-        val btnNext2 = findViewById<ImageView>(R.id.btnNext2)
-
-        btnPrev2.setOnClickListener{
+        binding.btnPrev2.setOnClickListener{
             finish()
         }
 
-        btnNext2.setOnClickListener {
+        binding.btnNext2.setOnClickListener {
             val intent = Intent(this,FourthBirdActivity::class.java)
             startActivity(intent)
         }
+        Picasso
+            .get()
+            .load("https://images.unsplash.com/photo-1518992028580-6d57bd80f2dd?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTh8fGJpcmR8ZW58MHx8MHx8fDA%3D")
+            .centerCrop()
+            .resize(500,700)
+            .into(binding.imageView)
 
     }
 }
